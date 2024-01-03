@@ -66,7 +66,7 @@ export function NavBar () {
             </NavigationMenu>
           ))}
       </div>
-      <Link href='https://github.com/koitran14' className="text-white w-fit h-fit p-2 rounded-full border hover:bg-white hover:text-black transition-all duration-200 ease-in-out">
+      <Link href='https://github.com/koitran14/Algorithm-Visualizer' className="text-white w-fit h-fit p-2 rounded-full border hover:bg-white hover:text-black transition-all duration-200 ease-in-out">
         <Github/>
       </Link>
     </main>
