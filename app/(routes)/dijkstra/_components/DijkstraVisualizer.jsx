@@ -174,23 +174,26 @@ export const DijkstraVisualizer = () => {
 
     return (
       <div className='flex flex-col gap-y-3 items-center'>
-        <div className='flex flex-row items-center gap-x-4'>
-          <Button onClick={visualizeDijkstra} className="w-fit h-fit bg-orange-500 hover:bg-orange-700 rounded-full gap-x-1">
-            <Play className='h-5 w-5'/> Run
-          </Button>
-          <Button onClick={() => setIsSettingWall(!isSettingWall)} className={cn("w-fit border-2 flex flex-row gap-x-2 border-teal-800 bg-white text-zinc-800 hover:bg-teal-800 hover:text-white", isSettingWall && "bg-teal-800 text-white")}>
-            {!isSettingWall ? 
+        <div className='flex flex-row gap-x-24 items-center'>
+          <h1 className='text-xl font-medium text-zinc-500'>Dijkstra Algorithm</h1>
+          <div className='flex flex-row items-center gap-x-4'>
+            <Button onClick={visualizeDijkstra} className="w-fit h-fit bg-orange-500 hover:bg-orange-700 rounded-full gap-x-1">
+              <Play className='h-5 w-5'/> Run
+            </Button>
+            <Button onClick={() => setIsSettingWall(!isSettingWall)} className={cn("w-fit border-2 flex flex-row gap-x-2 border-teal-800 bg-white text-zinc-800 hover:bg-teal-800 hover:text-white", isSettingWall && "bg-teal-800 text-white")}>
+              {!isSettingWall ? 
+                <div className='flex flex-row gap-x-1 items-center'>
+                  <Weight className='h-5 w-5'/>Wall Setting
+                </div>
+              :
               <div className='flex flex-row gap-x-1 items-center'>
-                <Weight className='h-5 w-5'/>Wall Setting
-              </div>
-            :
-            <div className='flex flex-row gap-x-1 items-center'>
-              <Flag className='h-5 w-5'/> Start / End Setting
-            </div>}
-          </Button>
-          <Button disabled={isRunningDijkstra} onClick={handleReset} className="w-fit bg-indigo-800 ">
-            Reset
-          </Button>
+                <Flag className='h-5 w-5'/> Start / End Setting
+              </div>}
+            </Button>
+            <Button disabled={isRunningDijkstra} onClick={handleReset} className="w-fit bg-indigo-800 ">
+              Reset
+            </Button>
+          </div>
         </div>
         <div className="grid">
             {grid.map((row, rowIdx) => (

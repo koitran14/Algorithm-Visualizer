@@ -3,12 +3,10 @@
 import {
     NavigationMenu,
     NavigationMenuContent,
-    NavigationMenuIndicator,
     NavigationMenuItem,
     NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
-    NavigationMenuViewport,
   } from "@/components/ui/navigation-menu.jsx"
 import { Github } from "lucide-react";
 import Link from "next/link";
@@ -47,7 +45,9 @@ export function NavBar () {
 
   return (
     <main className="w-full h-20 flex flex-row items-center justify-center bg-black md:gap-x-16 gap-x-5">
-      <h1 className="text-xl text-white">AlgoVisualizer.io</h1>
+      <Link href={'/'}>
+        <h1 className="text-xl text-white">AlgoVisualizer.io</h1>
+      </Link>
       <div className="flex flex-row items-center gap-x-2 bg-zinc-200 rounded-xl">
           {generalTitles.map((generalTitle) => (
             <NavigationMenu key={generalTitle}>
