@@ -27,14 +27,16 @@ const BSTPage = () => {
         </div>
         <div className={cn("grid grid-cols-2 gap-x-3 items-start h-fit w-fit px-2 justify-center",
           (node.left || node.right ) && "border-t-2 border-t-slate-400" 
-        )}>
+        )}
+          style={{ gridAutoRows: 'min-content'}}
+        >
           <div className='flex items-center justify-center flex-col'>
             {node.left && (<div className='h-8 w-2 border-l-2 border-l-slate-400'></div>)}
-            {leftNode}
+            <div className='px-3'>{leftNode}</div>
           </div>
           <div className='flex items-center justify-center flex-col'>
             {node.right && (<div className='h-8 w-2 border-l-2 border-l-slate-400'></div>)}
-            {rightNode}
+            <div className='px-3'>{rightNode}</div>
           </div>
         </div>
       </div>
