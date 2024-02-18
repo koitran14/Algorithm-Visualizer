@@ -179,7 +179,7 @@ export const DijkstraVisualizer = () => {
     }
     
     function handleMouseUp() {
-        setMouseIsPressed(false);
+      setMouseIsPressed(false);
     }
 
     const handleReset = () => {

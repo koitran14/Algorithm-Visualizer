@@ -1,3 +1,4 @@
+//enum
 const COMPARISON = {
   EQUAL: 0,
   SMALLER: -1,
@@ -92,9 +93,10 @@ class BinarySearchTree {
         } else {
           parent.right = null;
         }
-        return parent; // Return the parent of the deleted node
+        return parent; 
       }
-  
+
+      //replace that node by its child
       if (node.left === null) {
         const temp = node.right;
         this.replaceNode(node, node.right);
@@ -105,6 +107,7 @@ class BinarySearchTree {
         return temp;
       }
   
+      //2 children
       const minRightLeaf = this.min(node.right);
       node.value = minRightLeaf.value;
       node.right = this.remove(minRightLeaf.value, node.right, node);
@@ -121,7 +124,7 @@ class BinarySearchTree {
     } else {
       node.parent.right = replacement;
     }
-  
+    
     if (replacement !== null) {
       replacement.parent = node.parent;
     }
@@ -167,7 +170,6 @@ class BinarySearchTree {
   }
   
   inOrderTraverse(node = this.root, traversed = []) {
-    
     if (node === null) {
       return traversed;
     }

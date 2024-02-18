@@ -123,7 +123,6 @@ const BubbleSortVisualizer = () => {
           }
         }
 
-
         if (chart) {
           chart.data.datasets[0].data = newData.slice();
           chart.data.datasets[0].backgroundColor = colors;
@@ -139,8 +138,8 @@ const BubbleSortVisualizer = () => {
     }
   
     const remainingColors = newData.map((_, index) => {
-      if (index <= len - 1) return '#FFA500'; // Orange for remaining unsorted elements
-      else return '#3182CE'; // Set default color for the rest
+      if (index <= len - 1) return '#FFA500'; // Orange
+      else return '#3182CE'; // Set default
     });
   
     if (chart) {

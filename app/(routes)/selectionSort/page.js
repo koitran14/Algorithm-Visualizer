@@ -107,12 +107,12 @@ const SelectionSortVisualizer = () => {
                 if ((order && newData[j] < newData[target]) || (!order && newData[j] > newData[target])) {
                     target = j;
         
-                    // Set the color for the minimum index here
+                    // Set the color for the minimum index
                     colors = newData.map((_, index) => {
-                        if (index === target) return '#FF0000'; // Minimum index
-                        else if (index === i) return '#00FF00'; // Reset the previous checked index color
-                        else if (index <= i) return '#FFA500'; // Compared bars
-                        else return '#3182CE'; // Unsorted bars
+                        if (index === target) return '#FF0000'; // red
+                        else if (index === i) return '#00FF00'; // green
+                        else if (index <= i) return '#FFA500'; // orange
+                        else return '#3182CE'; // blue
                     });
                 }
             }
@@ -129,8 +129,8 @@ const SelectionSortVisualizer = () => {
         }
 
         const remainingColors = newData.map((_, index) => {
-            if (index <= len - 1) return '#FFA500'; // Orange for remaining unsorted elements
-            else return '#3182CE'; // Set default color for the rest
+            if (index <= len - 1) return '#FFA500'; // Orange
+            else return '#3182CE'; //Blue
         });
 
         if (chart) {
