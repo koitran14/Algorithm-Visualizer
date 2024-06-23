@@ -8,8 +8,6 @@
 ![GitHub forks](https://img.shields.io/github/forks/koitran14/Algorithm-Visualizer?style=social)
 ![GitHub issues](https://img.shields.io/github/issues/koitran14/Algorithm-Visualizer)
 
-![Project Banner](https://via.placeholder.com/800x200.png?text=Algorithm+Visualizer)
-
 </div>
 
 
