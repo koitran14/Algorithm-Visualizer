@@ -111,6 +111,6 @@ This project is licensed under the 0BSD License – see the [LICENSE](./LICENSE)
 
 Special thanks to the creators of Next.js and Tailwind CSS for their amazing tools. This project was inspired by the need for better educational resources in the field of computer science.
 
----
+#
 
 Happy Coding! ✨
